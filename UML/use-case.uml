@@ -1,0 +1,18 @@
+@startuml
+left to right direction
+
+actor "Пользователь" as User
+actor "Техник" as Tech
+
+rectangle "Система тикетов" {
+    usecase "Создать тикет" as UC_Create
+    usecase "Просматривать тикеты" as UC_View
+    usecase "Закрыть тикет" as UC_Close
+}
+
+User --> UC_Create
+User --> UC_View
+Tech --> UC_View
+Tech --> UC_Close
+
+@enduml
